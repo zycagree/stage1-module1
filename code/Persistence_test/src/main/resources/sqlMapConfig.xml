@@ -1,0 +1,14 @@
+<configuration>
+    <!--数据库连接信息-->
+    <transactionManager type="JDBC"></transactionManager>
+    <dataSource>
+        <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUrl" value="jdbc:mysql:///user"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="root"></property>
+    </dataSource>
+
+    <!--映射文件路径-->
+    <mapper resource="userMapper.xml"></mapper>
+
+</configuration>

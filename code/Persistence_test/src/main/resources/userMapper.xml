@@ -1,0 +1,22 @@
+<mapper namespace="com.zyc.mapper.IUserMapper">
+    <select id="findAll" resultType="com.zyc.bean.User">
+        select * from user
+    </select>
+
+    <select id="findUser" resultType="com.zyc.bean.User" parameterType="com.zyc.bean.User">
+        select * from user where id = #{id} and username = #{username}
+    </select>
+
+    <update id="updateUser" parameterType="com.zyc.bean.User">
+        update user set username = #{username} where id = #{id}
+    </update>
+
+    <insert id="addUser" parameterType="com.zyc.bean.User">
+        insert into user values(#{id},#{username})
+    </insert>
+
+    <delete id="deleteUser" parameterType="com.zyc.bean.User">
+        delete from user where id = #{id}
+    </delete>
+
+</mapper>
